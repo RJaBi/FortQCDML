@@ -1,0 +1,35 @@
+data_lfn = "lfn://ildg/example/config_000100"
+precision = "double"
+additional_info = "Generated for an SU(3) gauge ensemble."
+
+[management]
+annotation = "Example SU(3) gauge configuration"
+revision = 0
+revision_action = "generate"
+date = "2026-11-06T10:09:00+10:30"
+
+[management.participant]
+name = "Ryan Bignell"
+institution = "Trinity College Dublin"
+
+[machine]
+name = "example-cluster"
+institution = "Trinity College Dublin"
+type = "HPC cluster"
+
+[code]
+name = "LQCD configuration generator"
+version = "1.0.0"
+date = "2026-11-06T10:09:00+10:30"
+
+[algorithm]
+annotation = "Hybrid Monte Carlo"
+beta = "6.0"
+trajectory_length = "1.0"
+
+[markov_sequence]
+annotation = "Production chain"
+uri = "mc://ildg/example/ensemble_001"
+series = "a"
+update = 100
+step_annotation = "Configuration after 100 trajectories"

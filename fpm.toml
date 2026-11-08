@@ -1,0 +1,38 @@
+name = "FortQCDML"
+version = "0.1.0"
+license = "MIT"
+maintainer = "ryan07bignell+github@gmail.com"
+author = "Ryan Bignell"
+copyright = "Copyright 2026 Ryan Bignell"
+description = "Writes International Lattice Data Grid (ILDG) valid QCDML XML files"
+categories = ["fortran", "XML", "lattice-qcd"]
+#keywords = ["hdf5", "mpi"]
+  # The keywords field is an array of strings describing the project.
+
+#homepage = "https://stdlib.fortran-lang.org"
+  # URL to the webpage of the project.
+
+[install] # Options for the "install" subcommand
+library = false
+
+[build] # General Build Options
+auto-executables = true
+auto-examples = true
+auto-tests = true
+[library]
+source-dir="src"
+type = "shared"
+
+[dependencies]
+FoXy = { git = "https://github.com/Fortran-FOSS-Programmers/FoXy" }
+toml-f      = { git = "https://github.com/toml-f/toml-f" }
+[dev-dependencies]
+#[[executable]]
+#name="FortQCDML"
+#source-dir="app"
+#main="main.f90"
+
+[[test]]
+name="runTests"
+source-dir="test"
+main="check.f90"
