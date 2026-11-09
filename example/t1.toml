@@ -1,35 +1,41 @@
-data_lfn = "lfn://ildg/example/config_000100"
+data_lfn = "lfn://"
 precision = "double"
-additional_info = "Generated for an SU(3) gauge ensemble."
 
 [management]
-annotation = "Example SU(3) gauge configuration"
-revision = 0
-revision_action = "generate"
-date = "2026-11-06T10:09:00+10:30"
 
-[management.participant]
+[[management.archive_events]]
+revision_action = "generate"
+date = "2004-11-15T19:33:55+01:00"
+
+[management.archive_events.participant]
 name = "Ryan Bignell"
 institution = "Trinity College Dublin"
+orcid = "0000-0001-8401-1345"
 
-[machine]
-name = "example-cluster"
-institution = "Trinity College Dublin"
-type = "HPC cluster"
+[implementation]
 
-[code]
-name = "LQCD configuration generator"
-version = "1.0.0"
-date = "2026-11-06T10:09:00+10:30"
+[implementation.machine]
+name = "DIaL3"
+institution = "University of Leicester"
+type = "AMD-CPU"
 
-[algorithm]
-annotation = "Hybrid Monte Carlo"
-beta = "6.0"
-trajectory_length = "1.0"
+[implementation.code]
+name = "openQCD-Fastsum"
+version = "XX"
+date = "2003-11-28T13:00:00+01:00"
+
+#[algorithm]
+
+#[[algorithm.parameters]]
 
 [markov_sequence]
-annotation = "Production chain"
-uri = "mc://ildg/example/ensemble_001"
-series = "a"
-update = 100
-step_annotation = "Configuration after 100 trajectories"
+uri = "mc:"
+series = "563"
+
+[[markov_sequence.steps]]
+update = "1310"
+
+[[markov_sequence.steps.records]]
+field = "su3gauge"
+crc_checksum = "XX"
+ave_plaquette = 0.5610635491
